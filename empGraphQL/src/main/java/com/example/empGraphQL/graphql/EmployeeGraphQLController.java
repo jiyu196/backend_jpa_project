@@ -18,12 +18,12 @@ public class EmployeeGraphQLController {
     }
 
     @QueryMapping
-    public List<Employee> getEmployees() {
+    public List<Employee> employees() {
         return employeeRepository.findAll();
     }
 
     @QueryMapping
-    public Employee getEmployee(@Argument Long id) {
+    public Employee employee(@Argument Long id) {
         return employeeRepository.findById(id).orElse(null);
     }
 
